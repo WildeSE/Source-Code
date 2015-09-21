@@ -1,0 +1,178 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#define APSTUDIO_HIDDEN_SYMBOLS
+#include "windows.h"
+#undef APSTUDIO_HIDDEN_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// Français (France) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_FRA)
+#ifdef _WIN32
+LANGUAGE LANG_FRENCH, SUBLANG_FRENCH
+#pragma code_page(1252)
+#endif //_WIN32
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDI_DEEPINJECTOR        ICON                    "DeepInjector.ico"
+IDI_SMALL               ICON                    "small.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Menu
+//
+
+IDC_DEEPINJECTOR MENU 
+BEGIN
+    POPUP "&Fichier"
+    BEGIN
+        MENUITEM "&Quitter",                    IDM_EXIT
+    END
+    POPUP "&?"
+    BEGIN
+        MENUITEM "&À propos de ...",            IDM_ABOUT
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Accelerator
+//
+
+IDC_DEEPINJECTOR ACCELERATORS 
+BEGIN
+    "?",            IDM_ABOUT,              ASCII,  ALT
+    "/",            IDM_ABOUT,              ASCII,  ALT
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_ABOUTBOX DIALOG  22, 17, 230, 75
+STYLE DS_SETFONT | DS_MODALFRAME | WS_CAPTION | WS_SYSMENU
+CAPTION "À propos de"
+FONT 8, "System"
+BEGIN
+    ICON            IDI_DEEPINJECTOR,IDC_MYICON,14,9,16,16
+    LTEXT           "DeepInjector version 1.0",IDC_STATIC,49,10,119,8,SS_NOPREFIX
+    LTEXT           "Copyright (C) 2008",IDC_STATIC,49,20,119,8
+    DEFPUSHBUTTON   "OK",IDOK,195,6,30,11,WS_GROUP
+END
+
+IDD_MAIN DIALOGEX 0, 0, 266, 142
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | DS_CENTER | WS_CAPTION | WS_SYSMENU
+CAPTION "DeepInjector"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    EDITTEXT        IDC_EDIT_DLL,65,7,160,12,ES_AUTOHSCROLL
+    PUSHBUTTON      "...",IDC_BUTTON_BROWSE,227,6,32,14
+    COMBOBOX        IDC_COMBO_PROCESS,65,23,92,127,CBS_DROPDOWN | CBS_SORT | WS_VSCROLL | WS_TABSTOP
+    LTEXT           "Target process:",IDC_STATIC,7,25,52,8
+    LTEXT           "DLL:",IDC_STATIC,7,8,15,8
+    PUSHBUTTON      "Load",IDC_BUTTON_INJECT,160,22,32,14
+    PUSHBUTTON      "Unload",IDC_BUTTON_EJECT,194,22,32,14
+    PUSHBUTTON      "Kill",IDC_BUTTON_KILL,227,22,32,14
+    GROUPBOX        "Loading methods",IDC_STATIC,7,42,116,93,WS_GROUP
+    CONTROL         "LoadLibrary",IDC_RADIO_LOADLIBRARY,"Button",BS_AUTORADIOBUTTON,20,67,53,10
+    CONTROL         "LdrLoadDll",IDC_RADIO_LDR,"Button",BS_AUTORADIOBUTTON,20,89,49,10
+    CONTROL         "ManualMap",IDC_RADIO_MANUALMAP,"Button",BS_AUTORADIOBUTTON,20,111,49,10
+    GROUPBOX        "Calling methods",IDC_STATIC,129,42,129,93,WS_GROUP
+    CONTROL         "CreateRemoteThread",IDC_RADIO_CREATETHREAD,"Button",BS_AUTORADIOBUTTON,145,67,85,10
+    CONTROL         "SetThreadContext",IDC_RADIO_SETTHREADCONTEXT,"Button",BS_AUTORADIOBUTTON,145,89,75,10
+    CONTROL         "APC",IDC_RADIO_APC,"Button",BS_AUTORADIOBUTTON,145,111,29,10
+END
+
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#define APSTUDIO_HIDDEN_SYMBOLS\r\n"
+    "#include ""windows.h""\r\n"
+    "#undef APSTUDIO_HIDDEN_SYMBOLS\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO 
+BEGIN
+    IDD_MAIN, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 259
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 135
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE 
+BEGIN
+    IDS_APP_TITLE           "DeepInjector"
+    IDC_DEEPINJECTOR        "DEEPINJECTOR"
+END
+
+#endif    // Français (France) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+
